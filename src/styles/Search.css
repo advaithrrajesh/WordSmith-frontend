@@ -1,0 +1,44 @@
+/* Search.css */
+
+.SearchComponentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust margin as needed */
+}
+
+.search-bar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    ;
+    border-radius: 100px;
+
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    width: 200px;
+}
+
+.search-bar input:focus {
+    /* padding: 10px; */
+    outline: none;
+    /* Adjust width as needed */
+}
+
+.search-btn {
+    background-color: transparent;
+    /* Change the background color */
+    color: #1565c0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add hover effect */
+.search-btn:hover {
+    color: #10335b;
+}

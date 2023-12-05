@@ -1,9 +1,15 @@
 import React from 'react'
+import MainNavbar from '../components/MainNavBar/MainNavbar'
+import Write from '../components/Write/Write'
 
 const Main = () => {
-  return (
-    <div>Main</div>
-  )
+    return (<>
+        <MainNavbar />
+        <div className="WriteContainer">
+            <Write />
+        </div>
+    </>
+    )
 }
 
 export default Main

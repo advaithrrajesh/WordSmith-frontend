@@ -1,0 +1,57 @@
+.mainPageNavbarContainer {
+    width: 100;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.5)), url(../assets/mainnav.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.mainPageNavBarItems {
+    margin-left: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.SearchBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 5rem;
+    width: 50%;
+    height: 70%;
+}
+
+.Navbar-logo {
+    font-size: 20px;
+    margin-right: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.mainPageNavBarItems2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.writeIconContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.writeIconContainer:hover{
+    cursor: pointer;
+}
+

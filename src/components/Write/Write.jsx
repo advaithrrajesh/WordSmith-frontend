@@ -64,6 +64,7 @@ const Write = () => {
 
             // Handle any additional logic after successfully saving to the database
             console.log('Blog post submitted successfully!');
+            window.location.reload();
         } catch (error) {
             console.error('Error submitting blog post:', error);
             // Handle error as needed

@@ -3,6 +3,7 @@ import MainNavbar from '../components/MainNavBar/MainNavbar';
 import Write from '../components/Write/Write';
 import Blogs from '../components/Blogs/Blogs';
 import SearchBlogs from '../components/SearchBlogs/SearchBlogs';
+import '../styles/Main.css'
 
 const Main = () => {
     const [isWriteVisible, setWriteVisible] = useState(false);
@@ -29,7 +30,7 @@ const Main = () => {
     console.log("Rendering Main with searchQuery: ", searchQuery);
 
     return (
-        <>
+        <div className='MainRenderContainer'>
             <MainNavbar onWriteClick={handleWriteClick} onBlogsClick={handleBlogsClick} onSearch={handleSearch} />
             <div className="WriteContainer">
                 {searchQuery !== '' ? (
@@ -38,7 +39,7 @@ const Main = () => {
                     isWriteVisible ? <Write /> : <Blogs />
                 )}
             </div>
-        </>
+        </div>
     );
 }
 

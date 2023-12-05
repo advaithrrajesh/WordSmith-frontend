@@ -10,6 +10,7 @@ const Main = () => {
 
     const handleWriteClick = () => {
         setWriteVisible(true);
+        setSearchQuery(''); // Reset search query when switching to Write view
     };
 
     const handleBlogsClick = () => {
@@ -18,7 +19,7 @@ const Main = () => {
 
     const handleSearch = (query) => {
         setSearchQuery(query);
-        setWriteVisible(false); 
+        setWriteVisible(false);
     };
 
     useEffect(() => {
@@ -31,7 +32,11 @@ const Main = () => {
         <>
             <MainNavbar onWriteClick={handleWriteClick} onBlogsClick={handleBlogsClick} onSearch={handleSearch} />
             <div className="WriteContainer">
-                {(searchQuery !== '' && <SearchBlogs key={searchQuery} query={searchQuery} />) || (isWriteVisible ? <Write /> : <Blogs />)}
+                {searchQuery !== '' ? (
+                    <SearchBlogs key={searchQuery} query={searchQuery} />
+                ) : (
+                    isWriteVisible ? <Write /> : <Blogs />
+                )}
             </div>
         </>
     );

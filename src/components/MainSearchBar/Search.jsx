@@ -1,26 +1,33 @@
-import React from "react";
-import '../../styles/Search.css'
+import React, { useState } from "react";
+import '../../styles/Search.css';
 import SearchIcon from '@mui/icons-material/Search';
 
-const Search = props => {
+const Search = ({ onSubmit }) => {
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const handleInputChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        onSubmit(searchQuery);
+    };
+
     return (
-        // <div className="ui search">
-        //         <input
-        //             value={props.contactsValue}
-        //             onChange={props.onChangeHandler}
-        //             className="prompt"
-        //             type="text"
-        //             placeholder="Search Articles"
-        //         />
-        //         <i className="search icon" />
-        //     <div className="results" />
-        // </div>
         <div className="SearchComponentContainer">
-            <form action="" class="search-bar">
-                <input type="search" name="search" pattern=".*\S.*"  placeholder="Search articles here..."required />
-                    <button class="search-btn" type="submit">   
-                        <span><SearchIcon /></span>
-                    </button>
+            <form onSubmit={handleSubmit} className="search-bar">
+                <input
+                    type="search"
+                    name="search"
+                    pattern=".*\S.*"
+                    placeholder="Search articles here..."
+                    value={searchQuery}
+                    onChange={handleInputChange}
+                />
+                <button type="submit" className="search-btn">
+                    <span><SearchIcon /></span>
+                </button>
             </form>
         </div>
     );
